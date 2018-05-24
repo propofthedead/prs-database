@@ -26,7 +26,7 @@ create table [User]
 insert into [User]
 	(Username,Password,Firstname,Lastname,phone,email, IsAdmin,IsReviewer)
 values
-	('propofthedead','Helper108*','Foster','Stulen','513-459-5655','camodude5@yahoo.com',1,0)
+	('propofthedead','Helper108*','Foster','Stulen','513-459-5655','camodude5@yahoo.com',1,1)
 
 	insert into [User]
 	(Username,Password,Firstname,Lastname,phone,email)

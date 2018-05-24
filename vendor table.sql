@@ -15,4 +15,15 @@ create table vendor
 		Active bit not null default 1
 	);
 		go
-		create unique index uix_code on [vendor](code);
+		create unique index uix_code on vendor(code);
+		go
+
+	insert into vendor
+		(code, name , address,city,state,zip,phone,email,isPreApproved)
+		Values
+		('A123456','Amazon','123 amazon dr','Amazon','KY','65421','513-348-1234','amazonian@amazon.com',1)
+
+	insert into vendor
+		(code, name , address,city,state,zip,phone,email)
+		values
+		('A654321','Best Buy','4587 Waterstone ct','Mason','OH','45040','241-456-9745','bestbuy@bestie.com')
