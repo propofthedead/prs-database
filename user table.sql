@@ -1,3 +1,11 @@
+use master;
+go
+drop database if exists prs;
+go 
+create database prs;
+go 
+use prs;
+go
 drop table [user]
 create table [User]
 	(
