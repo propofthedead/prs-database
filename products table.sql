@@ -11,3 +11,16 @@ create table products
 	photopath nvarchar(255),
 	active bit not null default 1
 );
+
+insert into products
+(VendorId,partNumber,name,price,unit)
+values
+(1,'1234856479454612','Overwatch',69.96,1)
+
+insert into products
+(VendorId,partNumber,name,price,unit)
+values
+(2,'54321465465313','Loot Boxes OW',12.94,3)
+
+
+select * from products
