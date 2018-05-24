@@ -6,7 +6,7 @@ create database prs;
 go 
 use prs;
 go
-drop table [user]
+drop table [User]
 create table [User]
 	(
 		Id int not null identity(1,1) primary key,
@@ -16,11 +16,13 @@ create table [User]
 		Lastname nvarchar(30) not null,
 		phone nvarchar(12) not null,
 		email nvarchar (255)  not null unique,
-		IsReviewer bit not null default 1,
+		IsReviewer bit not null default 0,
 		IsAdmin bit not null default 0,
 		Active bit  not null default 1
 	);
-
+	go
+		create unique index uix_username on [user](Username);
+	go
 insert into [User]
 	(Username,Password,Firstname,Lastname,phone,email, IsAdmin,IsReviewer)
 values
@@ -41,7 +43,7 @@ values
 insert into [User]
 	(Username,Password,Firstname,Lastname,phone,email,IsAdmin,IsReviewer)
 values
-	('bush420','blazeit','George','Bush','111-111-1111','highpresident@whitehouse.yournotsupposetoknow',1,0)
+	('bush420','blazeit','George','Bush','111-111-1111','highpresident@whitehouse.yournotsupposetoknow',0,1)
 
 insert into [User]
 	(Username,Password,Firstname,Lastname,phone,email,IsAdmin,IsReviewer)
