@@ -10,7 +10,7 @@ drop table [User]
 create table [User]
 	(
 		Id int not null identity(1,1) primary key,
-		Username nvarchar(30) not null unique,
+		Username nvarchar(30) not null ,
 		Password nvarchar(30) not null ,
 		Firstname nvarchar(30) not null,
 		Lastname nvarchar(30) not null,
